@@ -1,3 +1,4 @@
+import React from 'react'; // Import React
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import MetaData from '../Layouts/MetaData';
@@ -18,7 +19,7 @@ const Cart = () => {
 
     return (
         <>
-            <MetaData title="Shopping Cart | Flipkart" />
+            <MetaData title="Shopping Cart | Siddhi Ceatives" />
             <main className="w-full mt-20">
 
                 {/* <!-- row --> */}

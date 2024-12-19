@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useState } from 'react';
 import TextField from '@mui/material/TextField'
 import Avatar from '@mui/material/Avatar'
@@ -54,7 +55,7 @@ const Register = () => {
         formData.set("gender", gender);
         formData.set("password", password);
         formData.set("avatar", avatar);
-
+        console.log("----user--",user)
         dispatch(registerUser(formData));
     }
 
@@ -88,9 +89,9 @@ const Register = () => {
 
     return (
         <>
-            <MetaData title="Register | Flipkart" />
+            <MetaData title="Register | Siddhi Ceatives" />
 
-            {loading && <BackdropLoader />}
+            
             <main className="w-full mt-12 sm:pt-20 sm:mt-0">
 
                 {/* <!-- row --> */}

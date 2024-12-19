@@ -1,3 +1,4 @@
+import React from 'react';
 import mobiles from '../../assets/images/Categories/phone.png';
 import fashion from '../../assets/images/Categories/fashion.png';
 import electronics from '../../assets/images/Categories/electronics.png';

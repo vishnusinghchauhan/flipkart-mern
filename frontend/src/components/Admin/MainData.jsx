@@ -1,15 +1,13 @@
-import { useEffect } from 'react';
-import Chart from 'chart.js/auto'
-import { Doughnut, Line, Pie, Bar } from 'react-chartjs-2';
-import { getAdminProducts } from '../../actions/productAction';
-import { useSelector, useDispatch } from 'react-redux';
+import React, { useEffect } from 'react'; // Import React and useEffect
+import { Bar, Doughnut, Line, Pie } from 'react-chartjs-2';
+import { useDispatch, useSelector } from 'react-redux';
 import { getAllOrders } from '../../actions/orderAction';
+import { getAdminProducts } from '../../actions/productAction';
 import { getAllUsers } from '../../actions/userAction';
 import { categories } from '../../utils/constants';
 import MetaData from '../Layouts/MetaData';
 
 const MainData = () => {
-
     const dispatch = useDispatch();
 
     const { products } = useSelector((state) => state.products);
@@ -18,7 +16,8 @@ const MainData = () => {
 
     let outOfStock = 0;
 
-    products?.forEach((item) => {
+
+    (products || []).forEach((item) => {
         if (item.stock === 0) {
             outOfStock += 1;
         }
@@ -30,10 +29,13 @@ const MainData = () => {
         dispatch(getAllUsers());
     }, [dispatch]);
 
-    let totalAmount = orders?.reduce((total, order) => total + order.totalPrice, 0);
+    // Fix applied here
+    //let totalAmount = (orders || []).reduce((total, order) => total + order.totalPrice, 0);
+    let totalAmount = (orders || []).reduce((total, order) => total + order.totalPrice, 0);
 
-    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     const date = new Date();
+    
     const lineState = {
         labels: months,
         datasets: [
@@ -41,19 +43,19 @@ const MainData = () => {
                 label: `Sales in ${date.getFullYear() - 2}`,
                 borderColor: '#8A39E1',
                 backgroundColor: '#8A39E1',
-                data: months.map((m, i) => orders?.filter((od) => new Date(od.createdAt).getMonth() === i && new Date(od.createdAt).getFullYear() === date.getFullYear() - 2).reduce((total, od) => total + od.totalPrice, 0)),
+                data: months.map((m, i) => (orders || []).filter((od) => new Date(od.createdAt).getMonth() === i && new Date(od.createdAt).getFullYear() === date.getFullYear() - 2).reduce((total, od) => total + od.totalPrice, 0)),
             },
             {
                 label: `Sales in ${date.getFullYear() - 1}`,
                 borderColor: 'orange',
                 backgroundColor: 'orange',
-                data: months.map((m, i) => orders?.filter((od) => new Date(od.createdAt).getMonth() === i && new Date(od.createdAt).getFullYear() === date.getFullYear() - 1).reduce((total, od) => total + od.totalPrice, 0)),
+                data: months.map((m, i) => (orders || []).filter((od) => new Date(od.createdAt).getMonth() === i && new Date(od.createdAt).getFullYear() === date.getFullYear() - 1).reduce((total, od) => total + od.totalPrice, 0)),
             },
             {
                 label: `Sales in ${date.getFullYear()}`,
                 borderColor: '#4ade80',
                 backgroundColor: '#4ade80',
-                data: months.map((m, i) => orders?.filter((od) => new Date(od.createdAt).getMonth() === i && new Date(od.createdAt).getFullYear() === date.getFullYear()).reduce((total, od) => total + od.totalPrice, 0)),
+                data: months.map((m, i) => (orders || []).filter((od) => new Date(od.createdAt).getMonth() === i && new Date(od.createdAt).getFullYear() === date.getFullYear()).reduce((total, od) => total + od.totalPrice, 0)),
             },
         ],
     };
@@ -66,7 +68,7 @@ const MainData = () => {
             {
                 backgroundColor: ['#9333ea', '#facc15', '#4ade80'],
                 hoverBackgroundColor: ['#a855f7', '#fde047', '#86efac'],
-                data: statuses.map((status) => orders?.filter((item) => item.orderStatus === status).length),
+                data: statuses.map((status) => (orders || []).filter((item) => item.orderStatus === status).length),
             },
         ],
     };
@@ -90,14 +92,14 @@ const MainData = () => {
                 borderColor: '#9333ea',
                 backgroundColor: '#9333ea',
                 hoverBackgroundColor: '#6b21a8',
-                data: categories.map((cat) => products?.filter((item) => item.category === cat).length),
+                data: categories.map((cat) => (products || []).filter((item) => item.category === cat).length),
             },
         ],
     };
 
     return (
         <>
-            <MetaData title="Admin Dashboard | Flipkart" />
+            <MetaData title="Admin Dashboard | Siddhi Ceatives" />
 
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-6">
                 <div className="flex flex-col bg-purple-600 text-white gap-2 rounded-xl shadow-lg hover:shadow-xl p-6">

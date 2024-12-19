@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect } from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import { useDispatch, useSelector } from 'react-redux';
@@ -122,7 +123,7 @@ const UserTable = () => {
 
     return (
         <>
-            <MetaData title="Admin Users | Flipkart" />
+            <MetaData title="Admin Users | Siddhi Ceatives" />
 
             {loading && <BackdropLoader />}
 

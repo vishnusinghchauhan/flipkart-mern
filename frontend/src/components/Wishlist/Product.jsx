@@ -1,3 +1,4 @@
+import React from 'react'; // Import React
 import { Link } from 'react-router-dom';
 import { getDiscount } from '../../utils/functions';
 import DeleteIcon from '@mui/icons-material/Delete';

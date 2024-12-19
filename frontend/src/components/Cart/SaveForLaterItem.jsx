@@ -1,3 +1,4 @@
+import React from 'react';
 import { useSnackbar } from 'notistack';
 import { useDispatch } from 'react-redux';
 import { addItemsToCart } from '../../actions/cartAction';

@@ -1,4 +1,5 @@
 import CircularProgress from '@mui/material/CircularProgress';
+import React from 'react';
 
 const Loading = () => {
     return (

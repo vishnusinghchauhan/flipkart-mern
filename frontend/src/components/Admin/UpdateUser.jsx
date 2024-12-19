@@ -1,3 +1,4 @@
+import React from 'react';
 import { useSnackbar } from 'notistack';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -72,7 +73,7 @@ const UpdateUser = () => {
 
     return (
         <>
-            <MetaData title="Admin: Update User | Flipkart" />
+            <MetaData title="Admin: Update User | Siddhi Ceatives" />
 
             {updateLoading && <BackdropLoader />}
 

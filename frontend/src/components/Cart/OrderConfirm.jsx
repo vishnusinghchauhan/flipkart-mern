@@ -1,3 +1,5 @@
+
+import React from 'react'; // Import React
 import { useSelector } from 'react-redux';
 import CartItem from './CartItem';
 import PriceSidebar from './PriceSidebar';
@@ -13,7 +15,7 @@ const OrderConfirm = () => {
 
     return (
         <>
-        <MetaData title="Flipkart: Order Confirmation" />
+        <MetaData title="Siddhi Ceatives: Order Confirmation" />
 
         <main className="w-full mt-20">
 

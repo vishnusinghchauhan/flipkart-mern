@@ -1,3 +1,5 @@
+
+import React from 'react';
 import { useEffect, useState } from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import { useDispatch, useSelector } from 'react-redux';
@@ -99,7 +101,7 @@ const ReviewsTable = () => {
 
     return (
         <>
-            <MetaData title="Admin Reviews | Flipkart" />
+            <MetaData title="Admin Reviews | Siddhi Ceatives" />
 
             {loading && <BackdropLoader />}
             <div className="flex justify-between items-center gap-2 sm:gap-12">

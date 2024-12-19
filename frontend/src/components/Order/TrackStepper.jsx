@@ -1,3 +1,4 @@
+import React from 'react'; // Import React
 import { Step, StepLabel, Stepper } from '@mui/material';
 import CircleIcon from '@mui/icons-material/Circle';
 import { formatDate } from '../../utils/functions';

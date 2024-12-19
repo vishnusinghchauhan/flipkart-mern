@@ -1,3 +1,4 @@
+import React from 'react';
 import TextField from '@mui/material/TextField';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -73,7 +74,7 @@ const ForgotPassword = () => {
 
                                     {/* <!-- button container --> */}
                                     <div className="flex flex-col gap-2.5 mt-2 mb-32">
-                                        <p className="text-xs text-primary-grey text-left">By continuing, you agree to Flipkart's <a href="https://www.flipkart.com/pages/terms" className="text-primary-blue"> Terms of Use</a> and <a href="https://www.flipkart.com/pages/privacypolicy" className="text-primary-blue"> Privacy Policy.</a></p>
+                                        <p className="text-xs text-primary-grey text-left">By continuing, you agree to Siddhi Ceatives's <a href="https://www.Siddhi Ceatives.com/pages/terms" className="text-primary-blue"> Terms of Use</a> and <a href="https://www.Siddhi Ceativeseativeseativeseatives.com/pages/privacypolicy" className="text-primary-blue"> Privacy Policy.</a></p>
                                         <button type="submit" className="text-white py-3 w-full bg-primary-orange shadow rounded-sm font-medium">Submit</button>
                                     </div>
                                     {/* <!-- button container --> */}
@@ -82,7 +83,7 @@ const ForgotPassword = () => {
                             </form>
                             {/* <!-- input container --> */}
 
-                            <Link to="/register" className="font-medium text-sm text-primary-blue">New to Flipkart? Create an account</Link>
+                            <Link to="/register" className="font-medium text-sm text-primary-blue">New to Siddhi Ceativeseativeseatives? Create an account</Link>
                         </div>
                         {/* <!-- edit info container --> */}
 

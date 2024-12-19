@@ -1,3 +1,5 @@
+
+import React from 'react'; // Import React
 import TextField from '@mui/material/TextField';
 import { useState, useEffect } from 'react';
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -183,7 +185,7 @@ const UpdateProduct = () => {
 
     return (
         <>
-            <MetaData title="Admin: Update Product | Flipkart" />
+            <MetaData title="Admin: Update Product | Siddhi Ceatives" />
 
             {loading && <BackdropLoader />}
             {updateLoading && <BackdropLoader />}

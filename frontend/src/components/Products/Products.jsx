@@ -1,3 +1,4 @@
+import React from 'react';
 import FormControl from '@mui/material/FormControl';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Pagination from '@mui/material/Pagination';
@@ -61,10 +62,10 @@ const Products = () => {
 
     return (
         <>
-            <MetaData title="All Products | Flipkart" />
+            <MetaData title="All Products | Siddhi Ceatives" />
 
-            <MinCategory />
-            <main className="w-full mt-14 sm:mt-0">
+            {/* <MinCategory /> */}
+            <main className="w-full mt-14 sm:mt-16">
 
                 {/* <!-- row --> */}
                 <div className="flex gap-3 mt-2 sm:mt-2 sm:mx-3 m-auto mb-7">
@@ -188,7 +189,7 @@ const Products = () => {
                         {loading ? <Loader /> : (
                             <div className="flex flex-col gap-2 pb-4 justify-center items-center w-full overflow-hidden bg-white">
 
-                                <div className="grid grid-cols-1 sm:grid-cols-4 w-full place-content-start overflow-hidden pb-4 border-b">
+                                <div className="grid grid-cols-1 sm:grid-cols-3 w-full place-content-start overflow-hidden pb-4 border-b">
                                     {products?.map((product) => (
                                             <Product {...product} key={product._id} />
                                         ))

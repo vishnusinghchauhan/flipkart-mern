@@ -1,3 +1,5 @@
+
+import React from 'react';
 import { useSnackbar } from 'notistack';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -130,8 +132,8 @@ const ProductDetails = () => {
             {loading ? <Loader /> : (
                 <>
                     <MetaData title={product.name} />
-                    <MinCategory />
-                    <main className="mt-12 sm:mt-0">
+                    {/* <MinCategory /> */}
+                    <main className="mt-12 sm:mt-16">
 
                         {/* <!-- product image & description container --> */}
                         <div className="w-full flex flex-col sm:flex-row bg-white sm:p-2 relative">
@@ -175,7 +177,7 @@ const ProductDetails = () => {
                             <div className="flex-1 py-2 px-3">
 
                                 {/* <!-- whole product description --> */}
-                                <div className="flex flex-col gap-2 mb-4">
+                                <div className="flex flex-col gap-2 mb-3">
 
                                     <h2 className="text-xl">{product.name}</h2>
                                     {/* <!-- rating badge --> */}
@@ -198,13 +200,13 @@ const ProductDetails = () => {
                                     {/* <!-- price desc --> */}
 
                                     {/* <!-- banks offers --> */}
-                                    <p className="text-md font-medium">Available offers</p>
+                                    {/* <p className="text-md font-medium">Available offers</p>
                                     {Array(3).fill("").map((el, i) => (
                                         <p className="text-sm flex items-center gap-1" key={i}>
                                             <span className="text-primary-lightGreen"><LocalOfferIcon sx={{ fontSize: "20px" }} /></span>
-                                            <span className="font-medium ml-2">Bank Offer</span> 15% Instant discount on first Flipkart Pay Later order of 500 and above <Link className="text-primary-blue font-medium" to="/">T&C</Link>
+                                            <span className="font-medium ml-2">Bank Offer</span> 15% Instant discount on first Siddhi Ceatives Pay Later order of 500 and above <Link className="text-primary-blue font-medium" to="/">T&C</Link>
                                         </p>
-                                    ))}
+                                    ))} */}
                                     {/* <!-- banks offers --> */}
 
                                     {/* <!-- warranty & brand --> */}
@@ -263,11 +265,11 @@ const ProductDetails = () => {
                                     </div>
                                     {/* <!-- seller details --> */}
 
-                                    {/* <!-- flipkart plus banner --> */}
-                                    <div className="sm:w-1/2 mt-4 border">
+                                    {/* <!-- Siddhi Ceativeseativeseativeseatives plus banner --> */}
+                                    {/* <div className="sm:w-1/2 mt-4 border">
                                         <img draggable="false" className="w-full h-full object-contain" src="https://rukminim1.flixcart.com/lockin/763/305/images/promotion_banner_v2_active.png" alt="" />
-                                    </div>
-                                    {/* <!-- flipkart plus banner --> */}
+                                    </div> */}
+                                    {/* <!-- Siddhi Ceativeseativeseativeseatives plus banner --> */}
 
                                     {/* <!-- description details --> */}
                                     <div className="flex flex-col sm:flex-row gap-1 sm:gap-14 mt-4 items-stretch text-sm">

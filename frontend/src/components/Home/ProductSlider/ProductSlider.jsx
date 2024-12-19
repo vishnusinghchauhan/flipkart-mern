@@ -1,3 +1,5 @@
+
+import React from 'react'; // Import React
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Slider from 'react-slick';

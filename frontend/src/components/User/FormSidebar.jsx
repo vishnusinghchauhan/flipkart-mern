@@ -1,4 +1,5 @@
 
+import React from 'react';
 const FormSidebar = ({ title, tag }) => {
     return (
         <div className="loginSidebar bg-primary-blue px-9 py-10 hidden sm:flex flex-col gap-4 w-2/5">

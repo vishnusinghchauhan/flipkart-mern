@@ -1,3 +1,5 @@
+
+import React from 'react';
 import { useEffect } from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import { useDispatch, useSelector } from 'react-redux';
@@ -161,7 +163,7 @@ const ProductTable = () => {
 
     return (
         <>
-            <MetaData title="Admin Products | Flipkart" />
+            <MetaData title="Admin Products | Siddhi Ceatives" />
 
             {loading && <BackdropLoader />}
 

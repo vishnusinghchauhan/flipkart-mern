@@ -1,3 +1,4 @@
+import React from 'react';
 import WebFont from 'webfontloader';
 import Footer from './components/Layouts/Footer/Footer';
 import Header from './components/Layouts/Header/Header';
@@ -36,6 +37,12 @@ import UpdateUser from './components/Admin/UpdateUser';
 import ReviewsTable from './components/Admin/ReviewsTable';
 import Wishlist from './components/Wishlist/Wishlist';
 import NotFound from './components/NotFound';
+import AboutPage from './components/Pages/AboutPage';
+import CareerPage from './components/Pages/CareerPage';
+import ContactPage from './components/Pages/ContactPage';
+import ConditionsPage from './components/Pages/ConditionsPage';
+import PolocyPage from './components/Pages/PolocyPage';
+
 
 function App() {
 
@@ -71,12 +78,12 @@ function App() {
   }, [pathname])
 
   // disable right click
-  window.addEventListener("contextmenu", (e) => e.preventDefault());
-  window.addEventListener("keydown", (e) => {
-    if (e.keyCode == 123) e.preventDefault();
-    if (e.ctrlKey && e.shiftKey && e.keyCode === 73) e.preventDefault();
-    if (e.ctrlKey && e.shiftKey && e.keyCode === 74) e.preventDefault();
-  });
+  //window.addEventListener("contextmenu", (e) => e.preventDefault());
+  // window.addEventListener("keydown", (e) => {
+  //   if (e.keyCode == 123) e.preventDefault();
+  //   if (e.ctrlKey && e.shiftKey && e.keyCode === 73) e.preventDefault();
+  //   if (e.ctrlKey && e.shiftKey && e.keyCode === 74) e.preventDefault();
+  // });
   
   return (
     <>
@@ -91,6 +98,13 @@ function App() {
         <Route path="/products/:keyword" element={<Products />} />
 
         <Route path="/cart" element={<Cart />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/careers" element={<CareerPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+
+        <Route path="/term&conditios" element={<ConditionsPage />} />
+        <Route path="/returnpolicy" element={<PolocyPage />} />
+
 
         {/* order process */}
         <Route path="/shipping" element={

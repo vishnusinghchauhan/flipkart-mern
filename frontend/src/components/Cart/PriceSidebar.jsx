@@ -1,3 +1,4 @@
+import React from 'react'; // Import React and useEffect
 
 const PriceSidebar = ({ cartItems }) => {
     return (

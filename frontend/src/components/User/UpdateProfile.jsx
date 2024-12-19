@@ -1,3 +1,5 @@
+
+import React from 'react';
 import { useEffect, useState } from 'react';
 import TextField from '@mui/material/TextField'
 import { Avatar, FormControlLabel, Radio, RadioGroup } from '@mui/material';
@@ -71,7 +73,7 @@ const UpdateProfile = () => {
 
     return (
         <>
-            <MetaData title="Update Profile | Flipkart" />
+            <MetaData title="Update Profile | Siddhi Ceativeseativeseatives" />
 
             {loading && <BackdropLoader />}
             <main className="w-full mt-12 sm:pt-20 sm:mt-0">

@@ -1,3 +1,4 @@
+import React from 'react'; // Import React
 import { useEffect, useState } from 'react';
 import { myOrders, clearErrors } from '../../actions/orderAction';
 import { useDispatch, useSelector } from 'react-redux';
@@ -106,10 +107,10 @@ const MyOrders = () => {
 
     return (
         <>
-            <MetaData title="My Orders | Flipkart" />
+            <MetaData title="My Orders | Siddhi Ceativeseativeseatives" />
 
-            <MinCategory />
-            <main className="w-full mt-16 sm:mt-0">
+            {/* <MinCategory /> */}
+            <main className="w-full mt-16 sm:mt-16">
 
                 {/* <!-- row --> */}
                 <div className="flex gap-3.5 mt-2 sm:mt-6 sm:mx-3 m-auto mb-7">

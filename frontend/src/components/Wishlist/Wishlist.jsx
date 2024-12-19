@@ -1,3 +1,4 @@
+import React from 'react'; // Import React
 import { useSelector } from 'react-redux';
 import MetaData from '../Layouts/MetaData';
 import MinCategory from '../Layouts/MinCategory';
@@ -5,18 +6,15 @@ import Sidebar from '../User/Sidebar';
 import Product from './Product';
 
 const Wishlist = () => {
-
     const { wishlistItems } = useSelector((state) => state.wishlist);
 
     return (
         <>
-            <MetaData title="Wishlist | Flipkart" />
+            <MetaData title="Wishlist | Siddhi Ceatives" />
 
-            <MinCategory />
-            <main className="w-full mt-12 sm:mt-0">
-
+            {/* <MinCategory /> */}
+            <main className="w-full mt-12 sm:mt-16">
                 <div className="flex gap-3.5 sm:w-11/12 sm:mt-4 m-auto mb-7">
-
                     <Sidebar activeTab={"wishlist"} />
 
                     <div className="flex-1 shadow bg-white">
@@ -33,15 +31,11 @@ const Wishlist = () => {
                             )}
 
                             {wishlistItems.map((item, index) => (
-                                <Product {...item} key={index}/>
-                            )
-                            ).reverse()}
-
+                                <Product {...item} key={index} />
+                            )).reverse()}
                         </div>
                         {/* <!-- wishlist container --> */}
-
                     </div>
-
                 </div>
             </main>
         </>

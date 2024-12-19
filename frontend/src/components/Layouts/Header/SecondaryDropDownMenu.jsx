@@ -1,44 +1,24 @@
-import NotificationsIcon from '@mui/icons-material/Notifications';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import LiveHelpIcon from '@mui/icons-material/LiveHelp';
-import TrendingUpIcon from '@mui/icons-material/TrendingUp';
-import DownloadIcon from '@mui/icons-material/Download';
+import React from 'react'; // Import React
 
 const SecondaryDropDownMenu = () => {
-
     const navs = [
         {
-            title: "Notification Preferences",
-            icon: <NotificationsIcon sx={{ fontSize: "18px" }} />,
-            redirect: "https://www.flipkart.com/communication-preferences/push",
-        },
-        {
-            title: "Sell on Flipkart",
+            title: "Sell on Siddhi Creatives",
             icon: <BusinessCenterIcon sx={{ fontSize: "18px" }} />,
-            redirect: "https://seller.flipkart.com/sell-online",
+            redirect: "/",
         },
         {
             title: "24x7 Customer Care",
             icon: <LiveHelpIcon sx={{ fontSize: "18px" }} />,
-            redirect: "https://www.flipkart.com/helpcentre",
-        },
-        {
-            title: "Advertise",
-            icon: <TrendingUpIcon sx={{ fontSize: "18px" }} />,
-            redirect: "https://advertising.flipkart.com",
-        },
-        {
-            title: "Download App",
-            icon: <DownloadIcon sx={{ fontSize: "18px" }} />,
-            redirect: "https://www.flipkart.com/mobile-apps",
-        },
-    ]
+            redirect: "/",
+        }
+    ];
 
     return (
         <div className="absolute w-60 -right-2 top-9 bg-white shadow-2xl rounded flex-col text-sm">
-
             {navs.map((item, i) => {
-
                 const { title, icon, redirect } = item;
 
                 return (
@@ -46,7 +26,7 @@ const SecondaryDropDownMenu = () => {
                         <span className="text-primary-blue">{icon}</span>
                         {title}
                     </a>
-                )
+                );
             })}
 
             <div className="absolute right-1/2 -top-2.5">

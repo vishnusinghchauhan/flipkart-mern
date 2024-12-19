@@ -1,3 +1,6 @@
+
+
+import React from 'react'; // Import React
 import TextField from '@mui/material/TextField';
 import { useState, useEffect } from 'react';
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -160,7 +163,7 @@ const NewProduct = () => {
 
     return (
         <>
-            <MetaData title="Admin: New Product | Flipkart" />
+            <MetaData title="Admin: New Product | Siddhi Ceatives" />
 
             {loading && <BackdropLoader />}
             <form onSubmit={newProductSubmitHandler} encType="multipart/form-data" className="flex flex-col sm:flex-row bg-white rounded-lg shadow p-4" id="mainform">

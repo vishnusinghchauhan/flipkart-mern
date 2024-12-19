@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useState } from 'react';
 import TextField from '@mui/material/TextField'
 import { useSnackbar } from 'notistack';
@@ -57,7 +58,7 @@ const UpdatePassword = () => {
 
     return (
         <>
-            <MetaData title="Password Update | Flipkart" />
+            <MetaData title="Password Update | Sdddhi CeiCiveseatives" />
 
             {loading && <BackdropLoader />}
             <main className="w-full mt-12 sm:pt-20 sm:mt-0">
